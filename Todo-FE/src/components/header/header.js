@@ -1,6 +1,7 @@
 import "./header.scss";
-
 import pp from "../../assets/img/pp.jpg";
+
+import { Link } from 'react-router-dom';
 
 import { AiOutlineLogout } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -20,9 +21,9 @@ function Header(props) {
 
             <div className="middle-section">
               <ul className="route-list gap-3">
-                <li>PENDING</li>
-                <li>COMPLETED</li>
-                <li>YET TO START</li>
+                <li><Link to={'/inprogress'}>IN-PROGRESS</Link></li>
+                <li><Link to={'/completed'}>COMPLETED</Link></li>
+                <li><Link to={'/yet-to-start'}>YET TO START</Link></li>
               </ul>
             </div>
             <div className="right-section">
