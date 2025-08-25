@@ -32,13 +32,6 @@ function App() {
         { currentState && <Modal onCancel={ closeModal } /> }
         { currentState && <Backdrop onCancel={ closeModal }/> } */}
 
-        {
-          dummyData.map((task)=>{
-            if(task.status == 'inprogress'){
-              return <Todo todo={task} />
-            }
-          })
-        }
         
 
       <Routes>

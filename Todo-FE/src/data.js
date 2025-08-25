@@ -17,7 +17,7 @@ const dummyData = [
     {
         title: 'Learning Devops',
         description: 'Devops is used to create SPAs.',
-        status: 'inprogress'
+        status: 'completed'
     }
 ]
 

@@ -37,8 +37,8 @@ function Todo(props){
             </div>
 
             <div className="btns">
-                <button className="btn btn-outline-primary" disabled={props.status == 'completed'}>Update Todo</button>
-                <button className="btn btn-danger" onClick={ startModal } disabled={props.status == 'completed'}>Delete Todo</button>
+                <button className="btn btn-outline-primary" disabled={props.todo.status == 'completed'}>Update Todo</button>
+                <button className="btn btn-danger" onClick={ startModal } disabled={props.todo.status == 'completed'}>Delete Todo</button>
             </div>  
         </div>
     )

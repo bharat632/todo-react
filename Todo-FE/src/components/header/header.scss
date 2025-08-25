@@ -53,6 +53,22 @@
     }
 }
 
+.header-route-btn{
+    text-decoration: none;
+    color: grey;
+
+    &:hover{
+        text-decoration: none;
+        color: #4FC5DB;
+    }
+}
+
+.active-link {
+    color: #4FC5DB;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
 .right-section{
     display: flex;
     align-items: center;
