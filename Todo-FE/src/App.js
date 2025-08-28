@@ -6,7 +6,7 @@ import dummyData from '../src/data';
 
 import Header from './components/header/header';
 import Todo from './components/todo/todo';
-import Modal from './components/modal/modal';
+import { Modal } from './components/modal/modal';
 import Backdrop from './components/backdrop/backdrop';
 import Completed from './pages/completed/completed';
 import YetToStart from './pages/yettostart/yettostart';
@@ -35,10 +35,13 @@ function App() {
         {
           dummyData.map((task)=>{
             if(task.status == 'inprogress'){
-              return <Todo todo={task} />
+              return <Todo todo={task} onDelete={ confirmModalHandler }/>
             }
           })
         }
+
+        { currentState && <Modal onCancel={ closeModal } /> }
+        { currentState && <Backdrop onCancel={ closeModal }/> }
         
 
       <Routes>

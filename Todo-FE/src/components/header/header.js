@@ -1,13 +1,27 @@
 import "./header.scss";
 import pp from "../../assets/img/pp.jpg";
+import { AddModal } from "../modal/modal";
+import Backdrop from "../backdrop/backdrop";
 
 import { Link } from 'react-router-dom';
 
 import { AiOutlineLogout } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import { useState } from "react";
 
 
 function Header(props) {
+
+  const [currentState, setModalOpen] = useState(false);
+
+  function openModal(){
+    setModalOpen(true);
+  }
+
+  function closeModal(){
+    setModalOpen(false);
+  }
+
   return (
     <header className="header">
       <div className="container-fluid" style={containerFluid}>
@@ -27,7 +41,7 @@ function Header(props) {
               </ul>
             </div>
             <div className="right-section">
-              <div className="add-todo btn btn-success">Add Todo</div>
+              <div className="add-todo btn btn-success" onClick={ openModal }>Add Todo</div>
               <div className="user-box dropdown-toggle no-caret" data-bs-toggle="dropdown" aria-expanded="true">
                 <a role="button" className="d-flex align-items-center gap-2">
                   username
@@ -52,7 +66,6 @@ function Header(props) {
                     <a className="dropdown-item" href="#">
                       <AiOutlineLogout size={20} color="grey" className="me-2"/>
                       Logout
-                      {/* <AiOutlineLogout size={24} color="grey" className="ms-2"/> */}
                     </a>
                   </li>
                 </ul>
@@ -61,6 +74,10 @@ function Header(props) {
           </div>
         </div>
       </div>
+
+      { currentState && <AddModal startModal={ openModal } onCancel={ closeModal }/> }
+      { currentState && <Backdrop  onCancel={ closeModal }/> }
+      
     </header>
   );
 }

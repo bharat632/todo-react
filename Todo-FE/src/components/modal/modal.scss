@@ -56,7 +56,33 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+.message>h3{
+  display: flex;
+  justify-content: center;
+}
+
 .btns{
     display: flex;
     justify-content: space-evenly;
+}
+
+.add-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cross-btn:hover{
+  color: grey;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  transition: 0.1s;
+}
+
+.save-btn>button{
+  width: 100%;
 }
