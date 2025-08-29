@@ -3,12 +3,11 @@ import pp from "../../assets/img/pp.jpg";
 import { AddModal } from "../modal/modal";
 import Backdrop from "../backdrop/backdrop";
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink} from "react-router-dom";
 
 import { AiOutlineLogout } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { useState } from "react";
-
 
 function Header(props) {
 
@@ -35,9 +34,42 @@ function Header(props) {
 
             <div className="middle-section">
               <ul className="route-list gap-3">
-                <li><Link to={'/inprogress'}>IN-PROGRESS</Link></li>
-                <li><Link to={'/completed'}>COMPLETED</Link></li>
-                <li><Link to={'/yet-to-start'}>YET TO START</Link></li>
+                {/* <li>
+                  <Link className="header-route-btn" to={"/inprogress"}>
+                    IN-PROGRESS
+                  </Link>
+                </li>
+                <li>
+                  <Link className="header-route-btn" to={"/completed"}>
+                    COMPLETED
+                  </Link>
+                </li>
+                <li>
+                  <Link className="header-route-btn" to={"/yet-to-start"}>
+                    YET TO START
+                  </Link>
+                </li> */}
+
+                <NavLink
+                  to={"/inprogress"}
+                  className={({ isActive }) => `header-route-btn ${isActive ? "active-link" : ""}`}
+                >
+                  IN-PROGRESS
+                </NavLink>
+
+                <NavLink
+                  to={"/yet-to-start"}
+                  className={({ isActive }) => `header-route-btn ${isActive ? "active-link" : ""}`}
+                >
+                  YET TO START
+                </NavLink>
+
+                <NavLink
+                  to={"/completed"}
+                  className={({ isActive }) => `header-route-btn ${isActive ? "active-link" : ""}`}
+                >
+                  COMPLETED
+                </NavLink>
               </ul>
             </div>
             <div className="right-section">
@@ -46,14 +78,23 @@ function Header(props) {
                 <a role="button" className="d-flex align-items-center gap-2">
                   username
                   <div className="image">
-                    <img src={pp} alt="profile" className="img" width="40" height="40" />
+                    <img
+                      src={pp}
+                      alt="profile"
+                      className="img"
+                      width="40"
+                      height="40"
+                    />
                   </div>
                 </a>
 
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item d-flex align-items-center" href="#">
-                      <CgProfile size={20} color="grey" className="me-2"/>
+                    <a
+                      className="dropdown-item d-flex align-items-center"
+                      href="#"
+                    >
+                      <CgProfile size={20} color="grey" className="me-2" />
                       Profile
                     </a>
                   </li>
@@ -64,7 +105,11 @@ function Header(props) {
 
                   <li>
                     <a className="dropdown-item" href="#">
-                      <AiOutlineLogout size={20} color="grey" className="me-2"/>
+                      <AiOutlineLogout
+                        size={20}
+                        color="grey"
+                        className="me-2"
+                      />
                       Logout
                     </a>
                   </li>
