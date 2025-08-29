@@ -4,14 +4,8 @@ import dummyData from "../../data";
 
 function YetToStart(props){
     return (
-        <div className="container">
+        <div className="display-todo">
         {
-          // dummyData.map((task)=>{
-          //   if(task.status == 'yettostart'){
-          //     return <Todo todo={task} />
-          //   }
-          // })
-
           dummyData
           .filter((task) => task.status == "yettostart")
           .map((t) => (

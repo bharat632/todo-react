@@ -2,12 +2,12 @@ import Todo from "../../components/todo/todo";
 
 import dummyData from "../../data";
 
-function InProgress(props) {
+function Important(props) {
   return (
     <div className="display-todo">
       {
         dummyData
-          .filter((task) => task.status == "inprogress")
+          .filter((task) => task.isImportant)
           .map((t) => (
             <Todo todo={t} key={t.id} />
           ))
@@ -16,4 +16,4 @@ function InProgress(props) {
   );
 }
 
-export default InProgress;
+export default Important;

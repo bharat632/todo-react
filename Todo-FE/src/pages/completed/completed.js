@@ -4,14 +4,8 @@ import dummyData from "../../data";
 
 function Completed(props){
     return (
-        <div className="container">
+        <div className="display-todo"> 
         {
-          // dummyData.map((task)=>{
-          //   if(task.status == 'completed'){
-          //     return <Todo todo={task} />
-          //   }
-          // })
-
           dummyData
           .filter((task) => task.status == "completed")
           .map((t) => (

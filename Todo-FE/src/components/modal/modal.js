@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import './modal.scss';
 
-import { MdOutlineCancel } from "react-icons/md";
-import { TbLabelImportant } from "react-icons/tb";
-import { TbLabelImportantFilled } from "react-icons/tb";
-
 export function Modal(props) {
     function closeModal(){
         props.onCancel()
@@ -30,11 +26,10 @@ export function Modal(props) {
 
 export function AddModal(props){
 
-    let [ isFavourite, markAsFavourite ] = useState(false);
-
-    function markAsFav(){
-        isFavourite = !isFavourite
-        markAsFavourite(isFavourite);
+    const [ selectedStatus, setStatus ] = useState('Select Option');
+    const status = ['In-Progress', 'Yet To Start'];
+    function updateStatus(data){
+        setStatus(data);
     }
 
     function closeModal(){
@@ -49,9 +44,39 @@ export function AddModal(props){
         <div className="custom-modal" >
                 <div className="add-header">
                     <h3>Add a new Todo</h3>
-                    { isFavourite && <TbLabelImportant size={40} color="grey" className="me-2 cross-btn" onClick={ markAsFav }/> }
-                    { !isFavourite && <TbLabelImportantFilled size={40} color="yellow" className="me-2 cross-btn" onClick={ markAsFav }/>     }
                 </div>
+
+            <div className="add-todo-body">
+                <form>
+                    <div class="mb-3">
+                        <label htmlFor="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder='Enter Title here...' required/>
+                    </div>
+                    <div class="mb-3">
+                        <label htmlFor="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="description" placeholder='Enter Description here...' required/>
+                    </div>
+                    <div class="mb-3">
+                        <label htmlFor="yettostart" class="form-label">Status</label>
+                        <div class="dropdown">
+                            <div class="status-dropdown dropdown-toggle form-control" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                { selectedStatus }
+                            </div>
+                            <ul class="dropdown-menu status-dropdown">
+                                {
+                                    status.map((s)=> (
+                                        <li onClick={ ()=> updateStatus(s) }><a class="dropdown-item">{ s }</a></li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Mark as important</label>
+                    </div>
+                </form>
+            </div>
 
                 <div className="save-btn d-flex gap-2">
                     <button className="btn btn-success" onClick={ startModal }>Save</button>

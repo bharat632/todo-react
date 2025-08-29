@@ -34,22 +34,12 @@ function Header(props) {
 
             <div className="middle-section">
               <ul className="route-list gap-3">
-                {/* <li>
-                  <Link className="header-route-btn" to={"/inprogress"}>
-                    IN-PROGRESS
-                  </Link>
-                </li>
-                <li>
-                  <Link className="header-route-btn" to={"/completed"}>
-                    COMPLETED
-                  </Link>
-                </li>
-                <li>
-                  <Link className="header-route-btn" to={"/yet-to-start"}>
-                    YET TO START
-                  </Link>
-                </li> */}
-
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) => `header-route-btn ${isActive ? "active-link" : ""}`}
+                >
+                  IMPORTANT
+                </NavLink>
                 <NavLink
                   to={"/inprogress"}
                   className={({ isActive }) => `header-route-btn ${isActive ? "active-link" : ""}`}

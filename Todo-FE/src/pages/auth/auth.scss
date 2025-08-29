@@ -1,0 +1,266 @@
+.signup {
+    padding: 0 !important;
+    background: #282a35;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 70vw;
+    padding: 50px !important;
+    margin: 0 auto;
+    padding-bottom: 0 !important;
+}
+
+
+.gradient {
+    background-image: url('../../../assets/images/gradient-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.gradient h6 {
+    // padding: 0;
+    margin: 0 !important;
+    color: white;
+    font-size: 14px;
+}
+
+.left-content {
+    padding-right: 100px !important;
+}
+
+.w3-svg {
+    margin: 5vh 0;
+}
+
+.w3-svg figure {
+    padding: 0 !important;
+}
+
+.left-content h1,
+h3,
+li {
+    color: white;
+}
+
+.left-content h1 {
+    width: 60%;
+}
+
+.left-content h3 {
+    margin: 10px 0;
+}
+
+.left-content-ul {
+    z-index: 2000;
+    position: absolute;
+}
+
+.left-content-ul ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.left-content-ul ul>li {
+    padding: 2px 0;
+}
+
+.left-content-ul ul>li>svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #00c853;
+}
+
+.left-content-img {
+    width: auto;
+    height: auto;
+}
+
+.left-content-img img {
+    width: 200px;
+}
+
+.right-content {
+    background: white;
+    border-radius: 10px;
+}
+
+.w3-x {
+    margin-bottom: 15px;
+}
+
+.w3-form-img {
+    display: none;
+}
+
+.x {
+    display: block !important;
+    width: 100%;
+}
+
+.x svg {
+    float: right;
+    cursor: pointer;
+}
+
+.right-content span {
+    float: right;
+    margin: 5px;
+}
+
+.already-acc {
+    font-size: 15px;
+    font-family: 'Roboto-Semibold';
+    margin: 20px 0;
+    float: right;
+}
+
+.already-acc span>a {
+    text-decoration: none !important;
+    color: #00c853;
+}
+
+.login-options {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.option {
+    border-radius: 7px;
+    padding: 0 3px;
+    border: 1px solid #d4d1d3;
+    background-color: white;
+    display: flex;
+    height: 40px;
+    width: 100%;
+}
+
+.login-option-text {
+    font-family: 'Roboto-Semibold';
+    font-size: 12px;
+    padding-left: 15px;
+    margin: auto 0;
+}
+
+.login-option-logo {
+    margin: auto 0;
+    position: sticky;
+    left: 100%;
+}
+
+.login-option-logo svg {
+    margin: 0 20px;
+}
+
+.signup-form input {
+    padding: 10px;
+}
+
+.signup-form button {
+    padding: 10px;
+}
+
+.login-form input {
+    padding: 15px;
+}
+
+.login-form button {
+    padding: 12px;
+}
+
+form>input {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #d4d1d3;
+    padding: 15px;
+}
+
+form>button {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    background-color: #04aa6d;
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 15px;
+}
+
+input[type="checkbox"] {
+    accent-color: #04aa6d;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.login-footer {
+    background-image: url('../../../assets/images/login-footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 200px !important;
+}
+
+.row p {
+    color: white;
+    font-size: 12px;
+}
+
+.row p>a {
+    color: white;
+}
+
+.row p>a:hover {
+    color: #ffff99;
+    ;
+}
+
+.social a>svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.login-btn button {
+    width: 50%;
+}
+
+.forgot-password {
+    background: white;
+    color: black;
+    border: 1px solid #dee2e6;
+}
+
+.help-btn {
+    z-index: 100;
+    display: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+input.ng-invalid.ng-touched.ng-dirty {
+    border: 2px solid red;
+    background: #fbdcd6;
+}
+
+.error {
+    font-size: 12px;
+    margin: 5px 0;
+    color: red;
+}
