@@ -6,6 +6,7 @@ import Completed from './pages/completed/completed';
 import YetToStart from './pages/yettostart/yettostart';
 import InProgress from './pages/inprogress/inprogress';
 import Important from './pages/Important/important';
+import Auth from './pages/auth/auth';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
 
       <div className='App'>
         <Routes>
-          <Route path="/" element={<Important />} />
+          <Route path="/" element={ <Auth /> }  />
+          {/* <Route path="/" element={<Important />} /> */}
           <Route path="/inprogress" element={<InProgress />} />
           <Route path="/completed" element={<Completed />} />
           <Route path="/yet-to-start" element={<YetToStart />} />
